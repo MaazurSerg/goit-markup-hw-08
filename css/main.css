@@ -946,7 +946,7 @@ body {
   display: flex;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .footer-social-list {
     margin-bottom: 60px;
     justify-content: center;
@@ -1031,7 +1031,7 @@ body {
   border: 1px solid var(--third-text-color);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767px) {
   .form-footer__input {
     margin-bottom: 20px;
   }

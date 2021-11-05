@@ -98,7 +98,7 @@
 
 .footer-social-list {
   display: flex;
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 60px;
     justify-content: center;
   }
@@ -177,7 +177,7 @@
     border: 1px solid var(--third-text-color);
   }
 
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
     margin-bottom: 20px;
   }
   @media screen and (min-width: 768px) {
