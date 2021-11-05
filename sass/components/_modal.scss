@@ -1,0 +1,216 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms ease-in-out, visibility 300ms ease-in-out;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  padding: 40px;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 609px;
+  border-radius: 4px;
+
+  background-color: var(--main-background);
+  box-shadow: var(--card-portfolio-shadow);
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
+}
+
+.modal__close-btn {
+  display: flex;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--third-text-color);
+  }
+}
+
+.modal__icon {
+  width: 30px;
+  height: 30px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal__close-btn:focus &,
+  .modal__close-btn:hover & {
+    fill: var(--third-background);
+  }
+}
+
+.modal__title {
+  margin-bottom: 12px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: calc(30 / 20);
+  align-items: center;
+  letter-spacing: 0.03em;
+  @media screen and (min-width: 1200px) {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: calc(23 / 20);
+  }
+}
+
+.form-modal__field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.form-modal__label {
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--secondary-text-color);
+}
+
+.form-modal__input {
+  width: 100%;
+  height: 40px;
+  padding: 11px 42px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  background: transparent;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    border-color: var(--third-text-color);
+  }
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  bottom: 11px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .form-modal__input:focus + &,
+  .form-modal__input:hover + & {
+    fill: var(--third-background);
+  }
+}
+
+.form-modal__textarea-comment {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.01em;
+  resize: none;
+  outline: none;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    border-color: var(--third-text-color);
+  }
+  &::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
+}
+
+.form-modal__label-checkbox {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.46;
+  }
+}
+
+.form-modal__label-checkbox span {
+  display: flex;
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid var(--secondary-title-color);
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  background-origin: content-box;
+  outline: none;
+  &:focus,
+  &:hover {
+    border: 2px solid var(--third-text-color);
+  }
+  .form-modal__checkbox:checked + & {
+    background-color: var(--third-background);
+    border: none;
+  }
+}
+
+.form-modal__contract-link {
+  color: var(--third-text-color);
+}
+
+.form-modal__send-btn {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  padding: 10px 55px 10px 56px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  background-color: var(--third-background);
+  color: var(--primary-title-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: var(--card-portfolio-shadow);
+    background-color: var(--fourth-background);
+  }
+}
