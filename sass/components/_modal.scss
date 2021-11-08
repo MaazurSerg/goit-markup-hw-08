@@ -90,6 +90,9 @@
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+  &:nth-child(4) {
+    margin-bottom: 20px;
+  }
 }
 
 .form-modal__label {
@@ -153,11 +156,13 @@
   }
 }
 
+.form-modal__checkbox-field {
+  margin-bottom: 30px;
+}
+
 .form-modal__label-checkbox {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
-  margin-bottom: 30px;
   justify-content: start;
   align-items: center;
   cursor: pointer;

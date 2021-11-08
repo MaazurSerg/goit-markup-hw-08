@@ -135,6 +135,7 @@
 
   color: var(--primary-title-color);
   background: var(--card-bgc);
+  overflow-y: scroll;
 }
 
 .card-content__text {
