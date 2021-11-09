@@ -27,7 +27,7 @@
   display: flex;
   text-align: center;
   margin-left: auto;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     display: none;
   }
 }
@@ -36,7 +36,7 @@
   @media screen and (min-width: 768px) {
     margin-left: auto;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 767.98px) {
     display: none;
   }
 
@@ -61,6 +61,7 @@
 }
 
 .header-list__link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   font-weight: 500;
